@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import Select
 from time import sleep
 
 def test_chrome():
-    driver=webdriver.Сhrome()
+    driver=webdriver.Chrome()
     driver.get("https://leader-id.ru/")
     Keys.DOWN
     assert ("Leader-ID") in driver.title
@@ -22,8 +22,9 @@ def test_chrome():
     driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div[2]/div/div[1]/div/div[2]/span/div[2]/div[2]/div[1]/div/div/label/div').click()
     
     driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[2]/button').click()
+    sleep(3)
     driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div[2]/div/div[1]/div/div[2]/span[1]/div/div[2]/div[1]/div/div/div[2]').click()
-    driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div[1]/div[2]/div[2]/div/span/div/div[1]/span/div').click()
+    driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div[2]/div/div[1]/div/div[2]/span[1]/div/div[2]/div[1]/div/div/div[2]').click()
     driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div[1]/div[2]/div[2]/div/span/div/div[1]/span/div/input').send_keys('31102022'+Keys.TAB+'1430'+Keys.TAB+'1500')
     
     driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div[2]/div/div[1]/div/div[2]/span[2]/div/div[2]/div/div/div[2]/div/span/div').click()
