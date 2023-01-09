@@ -25,6 +25,7 @@ def test_firefox():
     driver.find_element(By.CSS_SELECTOR, '#__layout > div > div.header > div.app-dialog.modal-login > div > div > div.el-dialog__body > div.app-dialog__body.is-footer > div > div > span > div:nth-child(2) > div > span > div > input').send_keys('ostrovlyan@gmail.com'+Keys.TAB+'2S68e6n8nihxfqP')
     #+Keys.ENTER)
     sleep(30)
+
     driver.get("https://leader-id.ru/events/create/step-1")
     assert('Создание мероприятия - Основное') in driver.title
     sleep(3)
